@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROPERTY LISTING</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V21H3z"/><path d="M9 21v-7h6v7"/></symbol>
+    <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="icon-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="1.5"/><path d="m21 15-5-5L5 21"/></symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="icon-bed" viewBox="0 0 24 24"><path d="M3 18V6M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/></symbol>
+    <symbol id="icon-bath" viewBox="0 0 24 24"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 4 0M7 19l-1 2M17 19l1 2"/></symbol>
+    <symbol id="icon-area" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h5V4"/></symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#properties">Skip to properties</a>
+
+  <header class="site-header">
+    <nav class="navbar container " aria-label="Main navigation">
+        <a href="#top" class="logo">
+            <svg class="icon icon--lg" aria-hidden="true"><use href="#icon-home" /></svg>
+            <span>OLIVE COAST HOMES</span>
+        </a>
+        <ul class="navbar__links">
+            <li><a href="#properties">BUY</a></li>
+            <li><a href="#properties">RENT</a></li>
+            <li><a href="#contact">SELL</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <div class="navbar__actions">
+            <a href="#properties" class="saved" aria-label="Saved properties: 2">
+                <svg class="icon icon--filled" aria-hidden="true"><use href="#icon-heart" /></svg>
+                <span class="saved__text">SAVED (2)</span>
+                <span class="saved__badge" aria-hidden="true">2</span>
+            </a>
+            <button class="menu-button" type="button" aria-label="Open menu">
+              <svg class="icon icon--lg" aria-hidden="true"><use href="#icon-menu" /></svg>
+            </button>
+        </div>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="container">
+            <p class="hero__eyebrow">NORTH CYPRUS PROPERTY</p>
+            <h1 class="hero__title">Find your home by the sea</h1>
+            <p class="hero__text">Villas,appartments and bunglows,from the harbour to the sea</p>
+            <form action="#property" class="search" role="search">
+                <div class="search__field search__field--wide">
+                    <label for="search-location">Location</label>
+                    <input type="text" name="location" id="search-location" placeholder="e.g kyrnia">
+                </div>
+                <div class="search__row">
+                    <div class="search__field">
+                        <label for="search-bed">Bedrooms</label>
+                        <select name="bedrooms" id="search-bed">
+                            <option >Any</option>
+                            <option >1+</option>
+                            <option >2+</option>
+                            <option >3+</option>
+                            <option >4+</option>
+                        </select>
+                    </div>
+                    <div class="search__field">
+                        <label for="search-price">Max price</label>
+                        <select name="max-price" id="search-price">
+                            <option >Any</option>
+                            <option >$100000</option>
+                            <option >$200000</option>
+                            <option >$300000</option>
+                            <option >$350000</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn--primary search__button" type="submit">
+                    <svg class="icon" aria-hidden="true"><use href="#icon-search" /> </svg>
+                    Search 
+                </button>
+            </form>
+        </div>
+
+    </section>
+    <section class="listings" id="properties" aria-labelledby="listings-title">
+        <div class="container">
+            <div class="listings__header">
+                <div>
+                    <h2 id="listings-title">Featured properties</h2>
+                    <p class="listings__count">6 properties</p>
+                </div>
+                <div class="sort">
+                    <label for="sort">Sort by</label>
+                    <select name="sort" id="sort">
+                        <option>Recomended</option>
+                        <option>Price: low to high</option>
+                        <option>Price: high to low</option>
+                        <option>Newest</option>
+                    </select>
+                </div>
+            </div>
+            <ul class="filters" aria-label="Filter by property type">
+                <li><button class="chip is-active" type="button" aria-pressed="true" >All</button></li>
+                <li><button class="chip"  type="button" aria-pressed="false">Villa</button></li>
+                <li><button class="chip" type="button" aria-pressed="false">Appartment</button></li>
+                <li><button class="chip" type="button" aria-pressed="false">Bungalow</button></li>
+                <li><button class="chip" type="button" aria-pressed="false">Penthouse</button></li>
+            </ul>
+            <div class="grid">
+                <article class="card">
+                   <div class="card__media">
+                    <span class="tag">Sea view</span>
+                    <button class="heart is-saved" type="button" aria-label="Remove Sea View Villa from saved">
+                    <svg class="icon" aria-hidden="true"><use href="#icon-heart" /></svg>
+                    </button>
+                    <svg class="card__placeholder" aria-hidden="true" ><use href="#icon-image"/></svg>
+                   </div> 
+                   <div class="card__body">
+                    <p class="card__price">$100000</p>
+                    <h3 class="card__title">Sea View Villa</h3>
+                    <p class="card__location"><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-pin"/></svg>Kyrenoia</p>
+                    <ul class="features">
+                        <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-bed"/></svg>4 Beds</li>
+                        <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-bath"/></svg>3 Baths</li>
+                        <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-area"/></svg>220 m²</li>
+                    </ul>
+                   <a class="btn btn--outline" href="#details">View details</a>
+                   </div>
+                </article>
+                <article class="card">
+                  <div class="card__media">
+                    <span class="tag">New listing</span>
+                    <button class="heart" type="button" aria-label="Save Harbour Appartment">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-heart"/></svg>
+                    </button>
+                    <svg class="card__placeholder1" aria-hidden="true"><use href="#icon-image"/></svg>
+                  </div>
+                  <div class="card__body">
+                    <p class="card__price">$1650000</p>
+                    <h3 class="card__title">Harbour Appartments</h3>
+                    <p class="card__location"><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-pin"/></svg>Kyrenia</p>
+                    <ul class="features">
+                        <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-bed"/></svg>6 Beds</li>
+                        <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-bath"/></svg>4 Baths</li>
+                        <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-area"/></svg>300 m²</li>
+                    </ul>
+                    <button class="btn btn--outline" type="button" >View details </button>
+                  </div>
+                </article>
+                <article class="card">
+                    <div class="card__media">
+                        <span class="tag">Garden</span>
+                       <button class="heart" type="button" aria-label="Save Garden Bunglow">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-heart"/></svg>
+                       </button> 
+                       <svg class="card__placeholder2" aria-hidden="true" ><use href="#icon-image"/></svg>
+                    </div>
+                    <div class="card__body">
+                        <p class="card__price">$210000</p>
+                        <h3 class="card__title">Garden bunglow</h3>
+                        <p class="card__location" > <svg class="icon icon--sm" aria-hidden="true"><use href="#icon-pin"/></svg>Esentepe</p>
+                        <ul class="features">
+                            <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-bed"/></svg>4 beds</li>
+                            <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-bath"/></svg>3 Baths</li>
+                            <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-area"/></svg>120 m²</li>
+                        </ul>
+                        <button class="btn btn--outline" type="button">View details</button>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card__media">
+                        <span class="tag">Price reduced</span>
+                        <button class="heart is-saved" type="button" aria-label="">
+                            <svg class="icon" aria-hidden="true" ><use href="#icon-heart"/></svg>
+                        </button>
+                        <svg class="card__placeholder3" aria-hidden="true" ><use href="icon-image"/></svg>
+                    </div>
+                    <div class="card__body">
+                    <p class="card__price">$320000</p>
+                    <h3 class="card__title">City Penthouse</h3>
+                    <p class="card__location"><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-pin"/></svg></p>
+                    <ul class="features">
+                        <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-bed"/></svg>4 Beds</li>
+                        <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-bath"/></svg>2 Baths</li>
+                        <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-area"/></svg>160 m²</li>
+                    </ul>
+                    <button class="btn btn--outline" type="button" >View details</button>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card__media">
+                        <span class="tag">NEW LISTING</span>
+                        <button class="heart" type="button" aria-label="Save Beach Studio">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-heart"/></svg>
+                        </button>
+                        <svg class="card__placeholder4" aria-hidden="true"><use href="#icon-image"/></svg>
+                    </div>
+                    <div class="card__body">
+                        <p class="card__price">$590000</p>
+                        <h3 class="card__title">Beach Studio</h3>
+                        <p class="card__location"><svg class="icon icon--sm " aria-hidden="true"><use href="#icon-pin"/></svg></p>
+                        <ul class="features">
+                            <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-bed"/></svg>3 Beds</li>
+                            <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-bath"/></svg>2 Baths</li>
+                            <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-area"/></svg>100 m²</li>
+                        </ul>
+                        <button class="btn btn--outline" type="button">View details</button>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card__media">
+                        <span class="tag">Pool</span>
+                        <button class="heart" type="button" aria-label="Save Family Villa with pool">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-heart"/></svg>
+                        </button>
+                        <svg class="card__placeholder5" aria-hidden="true"><use href="#icon-image"/></svg>
+                    </div>
+                  <div class="card__body">
+                    <p class="card__price">$640000</p>
+                    <h3 class="card__title">Family Villa With Pool</h3>
+                    <p class="card__location"><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-pin"/></svg></p>
+                    <ul class="features">
+                        <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-bed"/></svg>7 Beds</li>
+                        <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-bath"/></svg>4 Baths</li>
+                        <li><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-area"/></svg>400m²</li>
+                    </ul>
+                    <button class="btn btn--outline" type="button">View details</button>
+                  </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="container contact__inner">
+            <div class="contact__info">
+                <h2 id="contact-title">Talk to an agent </h2>
+                <p>TELL US WHAT YOU ARE LOOKING FOR, AN AGENT WILL BE HERE TO ASSIST YOU </p>
+                <ul class="contact__list">
+                    <li><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg><a href="+923139282418">92 313 9282418</a></li>
+                    <li><svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg><a href="waleedafridi640@gmail.com">waleedafridi640@gmail.com</a></li>
+                    <li><svg class="icon" aria-hidden="true"><use href="#icon-pin"/></svg><span>HARBOUR ROAD , KYRENIA</span></li>
+                </ul>
+            </div>
+            <form action="#" class="form" method="post">
+                <div class="form__field">
+                    <label for="contact-name">Name</label>
+                    <input type="text" id="contact-name" name="name" autocomplete="name" required >
+                </div>
+                <div class="form__pair">
+                    <div class="form__field">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="form__field">
+                        <label for="contact-phone">Phone</label>
+                        <input type="phone" id="contact-phone" name="phone" autocomplete="phone" required>
+                    </div>
+                </div>
+                <div class="form__field">
+                    <label for="contact-message">Message</label>
+                    <textarea name="message" id="contact-message" rows="4" required></textarea>
+                </div>
+                <button class="btn btn--primary" type="submit" >Send message</button>
+            </form>
+        </div>
+    </section>
+
+  </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                  <p class="footer__logo">Olive coast Homes</p> 
+                  <p>Home by the sea in north cyprus</p> 
+                </div>
+                <nav class="footer__col" aria-label="Explore">
+                  <h2>Explore</h2>
+                  <ul>
+                    <li><a href="#properties">Buy</a></li>
+                    <li><a href="#properties">Rent</a></li>
+                    <li><a href="#contact">Sale</a></li>
+                  </ul>
+                </nav>
+                <nav class="footer__col" aria-label="Company">
+                    <h2>Company</h2>
+                    <ul>
+                        <li><a href="#top">About us</a></li>
+                        <li><a href="#contact">Contact us </a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__col" aria-label="Social Media">
+                     <h2>Follow us</h2>
+                     <ul><a href="#top">Tik Tok</a></ul>
+                     <ul><a href="#top">Instagram</a></ul>
+                     <ul><a href="#top">Facebook</a></ul>
+                </nav>
+            </div>
+            <p class="footer__copy" >© 2026 Olive Coast Homes.</p>
+        </div>
+    </footer>
+       <section class="modal" id="details" aria-labelledby="modal-title" aria-modal="true" role="dialog">
+                <a class="modal__backdrop" href="#properties" aria-label="Close details"></a>
+            <div class="modal__panel">
+              <a class="modal__close" href="#properties" aria-label="Close details">
+               <svg class="icon" aria-hidden="true"><use href="#icon-close" /></svg>
+               </a>
+               <div class="modal__media">
+        ...
+                <svg class="card__placeholder" aria-hidden="true"><use href="#icon-image"/></svg>
+            </div>
+            <div class="modal__body">
+                <div class="modal__top">
+                    <div>
+                        <h2 id="modal-title">Sea View Villa</h2>
+                        <p class="card__location"><svg class="icon icon--sm" aria-hidden="true"><use href="#icon-pin"/></svg>Kyrenia</p>
+                    </div>
+                    <p class="modal__price">$100000</p>
+                </div>
+                <ul class="features features--large">
+                    <li><svg class="icon icon--sm" aria-hidden="true"><use href="icon-bed"/>4 Beds</svg></li>
+                    <li><svg class="icon icon--sm" aria-hidden="true"><use href="icon-bath"/>3 Baths</svg></li>
+                    <li><svg class="icon icon--sm" aria-hidden="true"><use href="icon-area"/>220²</svg></li>
+                </ul>
+                <p class="modal__description">A bright four-bedroom villa on the hillside above Kyrenia, with an open-plan living room, a large terrace facing the sea and a private garden. Five minutes by car to the harbour.</p>
+               <div class="modal__actions">
+                <a href="#contact" class="btn btn--primary">Contact agent</a>
+                <button class="btn btn--outline" type="button">
+                    <svg class="icon" aria-hidden="true"><use href="#icon-heart"/></svg>
+                    Save
+                </button>
+               </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
